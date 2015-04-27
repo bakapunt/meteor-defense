@@ -2,6 +2,7 @@ var level;
 
 //increments the level
 function level_up() {
+	$('#sfxlevelup')[0].play();
 	level++;
 	fo_spawn_interval *= 0.8;
 	increase_speed();

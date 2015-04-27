@@ -83,6 +83,7 @@ function fo_update_all() {
 		if (collision_detected(temp_fo)) {
 			falling_objects.splice(i, 1);
 			score += temp_fo.speed * 10;
+			play_sound($('#sfxscorepoint')[0]);
 		}
 
 		//if catcher misses the falling object (falling object hits the ground)
@@ -90,6 +91,7 @@ function fo_update_all() {
 		if (fo_missed(temp_fo)) {
 			falling_objects.splice(i, 1);
 			health -= temp_fo.speed * 5;
+			play_sound($('#sfxbang')[0]);
 		}
 	}
 }

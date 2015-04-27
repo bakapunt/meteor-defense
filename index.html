@@ -36,15 +36,14 @@
       <h1>Meteor Defense</h1>
       <p>You operate the shield on a spaceship that happened to break down as it entered a meteor field.<br>
       Your high-tech shield can absorb any impact it receives. Protect the ship from the meteors.</p>
-      <p class="lead" id="highscore">high score</p>
+      <p class="lead" id="highscore"></p>
       <p class="lead">Click here to start</p>
       <p>Tips:</p>
       <ul>
-        <li>Faster moving meteors will do more damage to the ship, but will also award you a higher <br>
-        score if absorbed by the shield.</li>
+        <li>Faster moving meteors will do more damage to the ship, but will also award you a higher score if absorbed by the shield.</li>
         <li>The ship crew will repair the ship after each level.</li>
-        <li>As you progress through the meteor field, you may encounter meteors travelling with enough <br>
-        energy to destroy your ship with one hit.</li>
+        <li>As you progress through the meteor field, you may encounter meteors travelling with enough energy to destroy your ship with one hit.</li>
+        <li>Press the 'm' key to pause the music.</li>
       </ul>
     </div>
   	<canvas id="game"></canvas>
@@ -60,6 +59,12 @@
   	</div>
   </footer>
 
+  <audio id="bgmusic" src="audio/AngryRobotIII.ogg" preload loop="true"></audio>
+  <audio id="sfxbang" src="audio/bang.ogg" preload></audio>
+  <audio id="sfxgameover" src="audio/game-over.ogg" preload></audio>
+  <audio id="sfxlevelup" src="audio/level-up.ogg" preload></audio>
+  <audio id="sfxscorepoint" src="audio/score-point.ogg" preload></audio>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-- jquery -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->
   
@@ -71,5 +76,6 @@
   <script src="js/levels.js"></script>
   <script src="js/gameover.js"></script>
   <script src="js/hud.js"></script>
+  <script src="js/sound.js"></script>
 </body>
 </html>
