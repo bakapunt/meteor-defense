@@ -4,6 +4,7 @@ function game_over() {
 	playing = false;
 	$('#game').hide();
 	$('#gameover').show();
+	
 	setTimeout(function() {
 		$('#gameover').hide();
 		$('#startscreen').show();

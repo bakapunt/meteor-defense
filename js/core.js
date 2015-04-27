@@ -72,6 +72,7 @@ function draw() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	catcher.draw();
 	fo_draw_all();
+	draw_hud();
 }
 
 //main game loop, updates and draws everything

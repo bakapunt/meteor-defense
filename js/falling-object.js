@@ -148,5 +148,5 @@ function fo_draw_all() {
 //increases the minimum and maximum falling speeds of the falling objects
 function increase_speed() {
 	fo_speed_min *= 1.1;
-	fo_speed_max *= 1.2;
+	fo_speed_max *= 1.4;
 }

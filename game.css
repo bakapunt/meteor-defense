@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body {
+	margin-top: 53px;
 	padding-bottom: 0;
 }
 
@@ -29,4 +30,8 @@ h1 {
 
 #gameover {
 	display: none;
+}
+
+#highscore {
+	font-family: 'Press Start 2P', monospace;
 }

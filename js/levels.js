@@ -3,7 +3,7 @@ var level;
 //increments the level
 function level_up() {
 	level++;
-	fo_spawn_interval *= 0.9;
+	fo_spawn_interval *= 0.8;
 	increase_speed();
 	reset_level();
 }

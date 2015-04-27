@@ -10,8 +10,9 @@ var catcher = {
 		this.y = canvas.height - this.height;
 	},
 	draw: function() {
-		ctx.fillStyle = "#000";
-		ctx.fillRect(this.x, this.y, this.width, this.height);
+		var fo_image = new Image();
+		fo_image.src = "img/shield.png";
+		ctx.drawImage(fo_image, this.x, this.y);
 	}
 };
 
