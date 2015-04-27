@@ -92,7 +92,9 @@ function start_game() {
 }
 
 function print_highscore() {
-	$('#highscore').text("highscore: " + Math.floor(localStorage.getItem("highscore")));
+	if (localStorage.getItem("highscore") != null) {
+		$('#highscore').text("highscore: " + Math.floor(localStorage.getItem("highscore")));
+	}
 }
 
 // TODO: implement hud, sounds
