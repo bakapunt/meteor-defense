@@ -71,6 +71,7 @@ function fo_reset() {
 	fo_speed_max = 3;
 }
 
+//updates all falling objects in the array
 function fo_update_all() {
 	for (var i = 0; i < falling_objects.length; i++) {
 		//updates position of falling object
@@ -141,6 +142,7 @@ function spawn_falling_object() {
 	}
 }
 
+//draws all falling objects in the array
 function fo_draw_all() {
 	for (var i = 0; i < falling_objects.length; i++) {
 		falling_objects[i].draw();

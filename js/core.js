@@ -94,7 +94,9 @@ function start_game() {
 	game_loop();
 }
 
+//prints the highscore on the start screen
 function print_highscore() {
+	//checks if the highscore has been set first
 	if (localStorage.getItem("highscore") != null) {
 		$('#highscore').text("highscore: " + Math.floor(localStorage.getItem("highscore")));
 	}
