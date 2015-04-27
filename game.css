@@ -1,0 +1,12 @@
+body {
+	padding-bottom: 0;
+}
+
+.footer {
+	position: relative;
+}
+
+#game {
+	margin: 0 auto;
+	border: solid 1px #000;
+}
