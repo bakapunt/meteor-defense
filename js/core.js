@@ -91,4 +91,8 @@ function start_game() {
 	game_loop();
 }
 
+function print_highscore() {
+	$('#highscore').text("highscore: " + Math.floor(localStorage.getItem("highscore")));
+}
+
 // TODO: implement hud, sounds
