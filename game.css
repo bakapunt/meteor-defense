@@ -22,9 +22,14 @@ h1 {
 #startscreen, #gameover {
 	background: #000 url('img/bg.png') bottom left repeat-x;
 	width: 100%;
-	padding: 100px;
+	padding: 10px;
 	color: #fff;
 	text-shadow: 0 1px 3px rgba(100,100,100,0.5);
+}
+@media (min-width: 768px) {
+	#startscreen, #gameover {
+		padding: 100px 50px;
+	}
 }
 
 #gameover {
