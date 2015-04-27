@@ -1,5 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+
 body {
 	padding-bottom: 0;
+}
+
+h1 {
+	font-family: 'Press Start 2P', monospace;
 }
 
 .footer {
@@ -9,4 +15,18 @@ body {
 #game {
 	margin: 0 auto;
 	border: solid 1px #000;
+	display: none;
+	background: #000 url('img/bg.png') bottom left repeat-x;
+}
+
+#startscreen, #gameover {
+	background: #000 url('img/bg.png') bottom left repeat-x;
+	width: 100%;
+	padding: 100px;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(100,100,100,0.5);
+}
+
+#gameover {
+	display: none;
 }

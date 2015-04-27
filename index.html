@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>gravity game</title>
+	<title>Meteor Defense</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../style.css">
 	<link rel="stylesheet" type="text/css" href="game.css">
@@ -20,7 +20,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" id="to_top" href=".">gravity game</a>
+        <a class="navbar-brand" id="to_top" href=".">Meteor Defense</a>
       </div><!--/.navbar-header-->
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -32,7 +32,17 @@
   </nav>
 
   <div class="container">
+    <div id="startscreen" class="text-center">
+      <h1>Meteor Defense</h1>
+      <p>You operate the shield on a spaceship that happened to break down as it entered a meteor field.<br>
+      The shield can withstand any impact it receives. Protect the ship from the meteors.</p>
+      <p class="lead">Click here to start</p>
+    </div>
   	<canvas id="game"></canvas>
+    <div id="gameover" class="text-center">
+      <h1>GAME OVER</h1>
+      <p class="lead">Your ship was destroyed.</p>
+    </div>
   </div>
 
   <footer class="footer">
@@ -45,15 +55,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->
   
   <!-- game code -->
-  <script>
-    //starts the game when page is loaded
-    $(document).ready(function() {
-      start_game();
-    });
-  </script>
+  <script src="js/startscreen.js"></script>
   <script src="js/core.js"></script>
   <script src="js/catcher.js"></script>
   <script src="js/falling-object.js"></script>
   <script src="js/levels.js"></script>
+  <script src="js/gameover.js"></script>
 </body>
 </html>

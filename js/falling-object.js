@@ -1,8 +1,8 @@
 var falling_objects = [], //array of falling objects
-		fo_colours = [				//array of possible colours for falling objects
-			"#f00",
-			"#0f0",
-			"#00f"
+		fo_images = [				//array of possible colours for falling objects
+			"img/meteor.png",
+			"img/meteor2.png",
+			"img/meteor3.png"
 		],
 		fo_spawn_interval,		//time between new falling objects spawning
 		fo_per_level,					//number of falling objects per level, multiplied by level (eg. lvl2, 3perlevel: (2*3=6) objects for lvl2)
@@ -15,8 +15,8 @@ var falling_object = {
 	x: 0,
 	y: 0,
 	width: 50,
-	height: 50,
-	colour: "#000",
+	height: 100,
+	image: undefined,
 	speed: 2,
 
 	//sets initial position of falling object
@@ -27,20 +27,20 @@ var falling_object = {
 		this.y = 0 - this.height;
 	},
 
-	//sets colour of falling object
-	set_colour: function() {
-		this.colour = fo_colours[get_random_int(0, fo_colours.length-1)];
-	},
-
 	//sets speed of falling object
 	set_speed: function() {
 		this.speed = get_random_num(fo_speed_min, fo_speed_max);
 	},
 
+	//sets falling object image
+	set_image: function() {
+		this.image = fo_images[get_random_int(0, fo_images.length-1)];
+	},
+
 	//initialises falling object's position and colour
 	init: function() {
 		this.set_initial_pos();
-		this.set_colour();
+		this.set_image();
 		this.set_speed();
 	},
 
@@ -51,8 +51,9 @@ var falling_object = {
 
 	//draws the object
 	draw: function() {
-		ctx.fillStyle = this.colour;
-		ctx.fillRect(this.x, this.y, this.width, this.height);
+		var fo_image = new Image();
+		fo_image.src = this.image;
+		ctx.drawImage(fo_image, this.x, this.y);
 	}
 };
 
@@ -88,7 +89,7 @@ function fo_update_all() {
 		//remove it from the array and decrease health by the object's speed * 5
 		if (fo_missed(temp_fo)) {
 			falling_objects.splice(i, 1);
-			health -= temp_fo.speed * 3;
+			health -= temp_fo.speed * 5;
 		}
 	}
 }

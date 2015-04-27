@@ -10,6 +10,8 @@ canvas.width = $('.container').width() - 10;
 canvas.height = ($(window).height()) - 53;
 
 //global variables
+var playing = false;
+
 var health,
 		score;
 
@@ -44,6 +46,11 @@ function reset() {
 
 //updates all objects
 function update() {
+	//check if health is 0
+	if (health < 1) {
+		game_over();
+	};
+
 	//update all falling objects
 	fo_update_all();
 
@@ -69,13 +76,18 @@ function draw() {
 
 //main game loop, updates and draws everything
 function game_loop() {
-	requestAnimationFrame(game_loop);
+	if (playing) {
+		requestAnimationFrame(game_loop);
+	}
 	update();
 	draw();
 }
 
 //starts a new game
 function start_game() {
+	playing = true;
 	reset();
 	game_loop();
 }
+
+// TODO: implement hud, sounds

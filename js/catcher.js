@@ -2,8 +2,8 @@
 var catcher = {
 	x: 0,				//x coordinate
 	y: 0,				//y coordinate
-	width: 100,	//width in pixels
-	height: 40,	//height in pixels
+	width: 150,	//width in pixels
+	height: 50,	//height in pixels
 	reset: function() {
 		//places catcher in bottom center of canvas
 		this.x = canvas.width / 2 - this.width / 2;
