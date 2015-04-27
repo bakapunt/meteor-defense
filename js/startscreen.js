@@ -6,3 +6,11 @@ $('#startscreen').click(function() {
 	$('#game').show();
 	start_game();
 });
+
+$(document).keypress(function(e) {
+	if (e.keyCode == 32) {
+		$('#startscreen').hide();
+		$('#game').show();
+		start_game();
+	};
+})

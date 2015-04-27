@@ -1,6 +1,3 @@
-//this game was developed loosely following the tutorial at
-//http://code.tutsplus.com/tutorials/develop-your-first-game-in-canvas-from-start-to-finish--pre-39198
-
 //canvas element and context
 var canvas = $('#game')[0];
 var ctx = canvas.getContext('2d');
@@ -39,6 +36,9 @@ function reset() {
 	//add listener that moves the catcher when the mouse moves
 	canvas.addEventListener("mousemove", mouse_motion, false);
 
+	//add listener that moves the catcher with keyboard controls
+	$(document).keydown(key_pressed);
+
 	fo_reset();
 
 	time_then = new Date().getTime();
@@ -50,6 +50,9 @@ function update() {
 	if (health < 1) {
 		game_over();
 	};
+
+	//update catcher - checking catcher doesn't go offscreen
+	catcher.update();
 
 	//update all falling objects
 	fo_update_all();
@@ -96,5 +99,3 @@ function print_highscore() {
 		$('#highscore').text("highscore: " + Math.floor(localStorage.getItem("highscore")));
 	}
 }
-
-// TODO: implement hud, sounds
